@@ -1,0 +1,22 @@
+name: Test `flat-json` action
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-flat-json:
+    runs-on: [ 'ubuntu-latest' ]
+    name: Test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Test
+        id: test
+        uses: ./
+        with:
+          input: '[[1], [2,3], [4,5], [6]]'
+      - name: Check
+        run: |
+          echo "${{ steps.test.outputs.result }}"
+          test "${{ steps.test.outputs.result }}" = "[1,2,3,4,5,6]"

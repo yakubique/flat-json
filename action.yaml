@@ -1,0 +1,22 @@
+name: "Make JSON array flat"
+description: "Concat all arrays inside array"
+author: Vladimir Levin
+branding:
+  icon: code
+  color: purple
+inputs:
+  input:
+    description: Input JSON string or file
+    required: true
+  from_file:
+    description: Load JSON from file
+    default: 'false'
+  to_file:
+    description: Save result to file
+    default: 'false'
+outputs:
+  result:
+    description: Result list in JSON format (or file if `to_file = true`)
+runs:
+  using: 'node20'
+  main: 'action/index.js'
