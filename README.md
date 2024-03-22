@@ -1,8 +1,10 @@
 # Flat JSON
 
+[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
+[![Test `flat-json` action](https://github.com/yakubique/flat-json/actions/workflows/test-myself.yaml/badge.svg)](https://github.com/yakubique/flat-json/actions/workflows/test-myself.yaml)
+
 Concat all arrays inside array and return
 
-[![Test `flat-json` action](https://github.com/yakubique/flat-json/actions/workflows/test-myself.yaml/badge.svg)](https://github.com/yakubique/flat-json/actions/workflows/test-myself.yaml)
 
 [Usage workflow](https://github.com/yakubique/flat-json/actions/workflows/test-myself.yaml)
 
@@ -10,7 +12,7 @@ Concat all arrays inside array and return
 ```yaml
 - name: Flat JSON
   id: list
-  uses: yakubique/flat-json@v1
+  uses: yakubique/flat-json@v1.1
   with:
     input: '[[1], [2,3], [4,5], [6]]'
 

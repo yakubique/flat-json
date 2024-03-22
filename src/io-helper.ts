@@ -1,7 +1,7 @@
 import * as core from '@actions/core';
 import { getBooleanInput } from '@yakubique/atils/dist';
 
-enum Inputs {
+export enum Inputs {
     Input = 'input',
     FromFile = 'from_file',
     ToFile = 'to_file'
